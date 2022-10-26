@@ -1,0 +1,39 @@
+@import "../../../../scss/styles.scss";
+.country__card {
+  background: $darkBlue;
+  display: flex;
+  flex-direction: column;
+  width: 265px;
+  padding: 0;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  margin-bottom: 20px;
+  //margin-right: 32px;
+
+  .country__flag {
+    padding: 0;
+    margin: 0;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.country__detail {
+  padding: 25px;
+  h3 {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  .heading {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  h4 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 25px;
+    text-transform: capitalize;
+  }
+}

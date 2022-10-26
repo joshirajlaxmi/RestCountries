@@ -1,0 +1,35 @@
+<section class="filter container">
+  <form action="" #searchForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="filter__name">
+      <div class="search">
+        <button type="submit" class="searchButton">
+          <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
+        <input
+          type="text"
+          class="searchTerm"
+          placeholder="Search for a country.."
+          ngModel
+          name="countryName"
+        />
+      </div>
+    </div>
+    <div class="filter__region">
+      <select
+        name="region"
+        class="region"
+        (change)="selectRegion($event)"
+        ngModel
+      >
+        <option value="" disabled selected>Filter By Region</option>
+        <option
+          class="regionNames"
+          [value]="reg.id"
+          *ngFor="let reg of regionList"
+        >
+          {{ reg.name }}
+        </option>
+      </select>
+    </div>
+  </form>
+</section>

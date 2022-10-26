@@ -1,0 +1,75 @@
+@import "../../../scss/styles.scss";
+
+.filter {
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    .search {
+      width: 482px;
+      position: relative;
+      display: flex;
+    }
+    .searchTerm {
+      width: 100%;
+      background: $darkBlue;
+      border: none;
+      padding: 5px;
+      height: 54px;
+      border-radius: 5px;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    .searchTerm::placeholder {
+      color: $white;
+    }
+    .searchTerm:focus {
+      border: none;
+      outline: none;
+      background: $darkBlue;
+    }
+    .searchTerm:visited {
+      background: $darkBlue;
+    }
+    .searchButton {
+      width: 40px;
+      height: 54px;
+      border: none;
+      background: $darkBlue;
+      text-align: center;
+      color: #fff;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+  &__region {
+    width: 200px;
+    background: $darkBlue;
+    color: white;
+    select {
+      background: $darkBlue;
+      min-height: 58px;
+      width: 100%;
+      border: none;
+      color: white;
+      padding-left: 20px;
+      outline: none;
+      text-transform: capitalize;
+
+      .regionNames {
+        padding-top: 20px;
+        padding-left: 20px;
+        text-transform: capitalize;
+      }
+    }
+    // firefox vertical aligment of text
+    @-moz-document url-prefix() {
+      select {
+        padding-top: 20px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
